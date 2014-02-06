@@ -1,0 +1,26 @@
+--- DATA -------
+http://www.statmt.org/wmt14/translation-task.html
+
+https://wit3.fbk.eu/mt.php?release=2012-02
+
+http://www.cs.cmu.edu/~lingwang/microtopia/
+
+--- LMs ---------
+http://kheafield.com/code/kenlm/
+
+http://www.speech.sri.com/projects/srilm/
+
+
+--- Word alignments ------
+
+http://www.cdec-decoder.org/guide/fast_align.html
+
+https://code.google.com/p/giza-pp/
+
+
+--- MT toolkits ------
+
+http://www.statmt.org/moses/?n=Development.GetStarted
+
+http://www.cdec-decoder.org/guide/tutorial.html
+
