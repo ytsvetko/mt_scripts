@@ -10,5 +10,5 @@ wget http://downloads.sourceforge.net/project/boost/boost/1.51.0/boost_1_51_0.ta
 tar -xvzf boost_1_51_0.tar.gz
 cd boost_1_51_0
 ./bootstrap.sh
-./b2 --with=all --prefix=$TOOLS_DIR/boost -j 4 install threading=multi
+./b2 --with=all --layout=tagged --prefix=$TOOLS_DIR/boost -j 4 install threading=multi
 

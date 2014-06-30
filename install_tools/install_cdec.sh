@@ -15,20 +15,21 @@ elif [ `uname -n` == "workhorse.lti.cs.cmu.edu" ] ; then
   module load clab-boost
 elif [[ `uname -n` == *stampede.tacc* ]] ; then
   module load boost
-  WITH_BOOST="--with-boost=/opt/apps/gcc4_4/boost/1.51.0/"
+  WITH_BOOST="--with-boost=/opt/apps/gcc4_4/boost/1.51.0"
 else 
-  WITH_BOOST="--with-boost=${TOOLS_DIR}/boost/1.51.0/"
+  WITH_BOOST="--with-boost=${TOOLS_DIR}/boost_1_51_0"
 fi
 
-wget http://demo.clab.cs.cmu.edu/cdec/cdec-2014-01-28.tar.gz
-tar -xzvf cdec-2014-01-28.tar.gz
-ln -s cdec-2014-01-28 cdec
+rm -rf cdec
+wget http://demo.clab.cs.cmu.edu/cdec/cdec-2014-06-15.tar.gz
+tar -xzvf cdec-2014-06-15.tar.gz
+ln -s cdec-2014-06-15 cdec
 cd cdec
 ./configure ${WITH_BOOST}
-make -j 4
+make -j 4 
 make check
 ./tests/run-system-tests.pl
 
 cd python
-python setup.py install
+sudo python setup.py install
 
